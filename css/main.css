@@ -481,6 +481,12 @@ a {
   margin-right: 5rem;
 }
 
+@media (max-width: 56.25em) {
+  .about-up__right {
+    margin-right: 10rem;
+  }
+}
+
 .about-up__right.active {
   transform: scale(1.3);
   opacity: 1;
