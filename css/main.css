@@ -23,6 +23,15 @@
     --fs-400: 5rem;
   }
 }
+
+@media (max-width: 22em) {
+  :root {
+    --fs-100: 1.4rem;
+    --fs-200: 1.6rem;
+    --fs-300: 1.9rem;
+    --fs-400: 3rem;
+  }
+}
 /* reset */
 
 *,
@@ -48,6 +57,7 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: var(--fs-100);
+  overflow-x: hidden;
 }
 
 html,
@@ -344,6 +354,27 @@ a {
   }
 }
 
+@media (max-width: 56.25em) {
+  .hero .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .hero__text-area {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .hero__text-area {
+    margin-bottom: 5rem;
+  }
+}
+
+@media (max-width: 22em) {
+  .hero__text-area {
+    margin-bottom: 2rem;
+  }
+}
 .hero__text-area {
   color: var(--color-secondary);
 }
@@ -359,6 +390,12 @@ a {
   animation: animateTitle 1s ease-in-out 2 forwards alternate;
 }
 
+@media (max-width: 22em) {
+  .hero__text-area h1 {
+    margin: 1rem 0;
+  }
+}
+
 .hero__text-area a {
   margin-top: 3rem;
   display: inline-block;
@@ -372,9 +409,19 @@ a {
   margin-right: 2rem;
 }
 
+@media (max-width: 22em) {
+  .hero__text-area .view-work-btn {
+    margin-top: 1rem;
+  }
+}
 .hero__text-area .contact-btn {
   color: var(--color-secondary);
   border-bottom: 1px solid var(--color-secondary);
+}
+@media (max-width: 22em) {
+  .hero__text-area .contact-btn {
+    margin-top: 1rem;
+  }
 }
 
 .hero__img-box {
@@ -392,6 +439,22 @@ a {
   .hero__img-box {
     max-width: 30rem;
     max-height: 30rem;
+  }
+}
+
+/* <400px */
+@media (max-width: 25em) {
+  .hero__img-box {
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .hero__img-box {
+    max-width: 10rem;
+    max-height: 10rem;
+    border: 0.3rem solid #fff;
   }
 }
 
@@ -576,6 +639,12 @@ a {
   gap: 2rem;
   transform: translateY(20rem);
   transition: 0.5s;
+}
+
+@media (max-width: 25em) {
+  .services .container {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
 }
 
 .services .container.active {
@@ -822,6 +891,13 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
   gap: 1rem;
   margin: 1rem auto;
+}
+
+/* < 400px */
+@media (max-width: 25em) {
+  .portfolio .container {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
 }
 
 .portfolio .container .project {
